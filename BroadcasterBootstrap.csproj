@@ -39,6 +39,7 @@
     <LangVersion>7.3</LangVersion>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
     <OutputPath>bin\Release\</OutputPath>
@@ -52,49 +53,56 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
-      <HintPath>..\..\..\Workbench\Sims 3\Sims 3 Libraries\He Unprotec He Attac\System.dll</HintPath>
+      <HintPath>lib\System.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System.Xml">
-      <HintPath>..\..\..\Workbench\Sims 3\Sims 3 Libraries\He Unprotec He Attac\System.Xml.dll</HintPath>
+      <HintPath>lib\System.Xml.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="mscorlib">
-      <HintPath>..\..\..\Workbench\Sims 3\Sims 3 Libraries\He Unprotec He Attac\mscorlib.dll</HintPath>
+      <HintPath>lib\mscorlib.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="ScriptCore">
-      <HintPath>..\..\..\Workbench\Sims 3\Sims 3 Libraries\He Unprotec He Attac\ScriptCore.dll</HintPath>
+      <HintPath>lib\ScriptCore.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="SimIFace">
-      <HintPath>..\..\..\Workbench\Sims 3\Sims 3 Libraries\He Unprotec He Attac\SimIFace.dll</HintPath>
+      <HintPath>lib\SimIFace.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sims3GameplayObjects">
-      <HintPath>..\..\..\Workbench\Sims 3\Sims 3 Libraries\He Unprotec He Attac\Sims3GameplayObjects.dll</HintPath>
+      <HintPath>lib\Sims3GameplayObjects.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sims3GameplaySystems">
-      <HintPath>..\..\..\Workbench\Sims 3\Sims 3 Libraries\He Unprotec He Attac\Sims3GameplaySystems.dll</HintPath>
+      <HintPath>lib\Sims3GameplaySystems.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sims3Metadata">
-      <HintPath>..\..\..\Workbench\Sims 3\Sims 3 Libraries\He Unprotec He Attac\Sims3Metadata.dll</HintPath>
+      <HintPath>lib\Sims3Metadata.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sims3StoreObjects">
-      <HintPath>..\..\..\Workbench\Sims 3\Sims 3 Libraries\He Unprotec He Attac\Sims3StoreObjects.dll</HintPath>
+      <HintPath>lib\Sims3StoreObjects.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UI">
-      <HintPath>..\..\..\Workbench\Sims 3\Sims 3 Libraries\He Unprotec He Attac\UI.dll</HintPath>
+      <HintPath>lib\UI.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assembly.cs" />
+    <Compile Include="Broadcaster\Assembly.cs" />
+    <Compile Include="Common\GenericDelegate.cs" />
+    <Compile Include="Common\RepeatingFunctionTask.cs" />
+    <Compile Include="Data\GameStations.cs" />
+    <Compile Include="Data\ModeEntries.cs" />
+    <Compile Include="Data\ModeEntryGroups.cs" />
+    <Compile Include="Data\MusicModes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
